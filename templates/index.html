@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Analysis</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="image-container">
+        <div class="banner">
+            <h1>CRIME PREDICTIONS</h1>
+        </div>
+        <img src="../static/criminal-handcuffs (2).jpg" alt="Your Image" class="header-image" >
+        <div class="anchor-links1">
+            <a href="#div1">Crime Type</a>
+        </div>
+        <div class="anchor-links2">
+            <a href="#div2">Severity</a>
+        </div>
+        <div class="anchor-links3">
+            <a href="#div3">Location</a>
+        </div>
+        <div class="anchor-links4">
+            <a href="#div4">Gender</a>
+        </div>
+    </div>
+    <div class="container" id="div1">
+        <form action="/type" method = 'post'>
+            <h2>Crime Type Prediction</h2>
+            <label for="hours">Time(Hours)</label>
+            <select name="hours" id="hours">
+            </select>
+            <label for="days">Time(Day)</label>
+            <select name="days" id="days">
+                {% for i in days %}
+                    <option value = {{loop.index}} >{{ i }}</option>
+                {% endfor %}
+            </select>
+            <label for="month">Time(Month)</label>
+            <select name="month" id="month">
+                {% for i in month %}
+                    <option value = {{loop.index}} >{{ i }}</option>
+                {% endfor %}
+            </select>
+            <label for="area">Area</label>
+            <select name="area" id="area">
+                {% for i in areas %}
+                    <option value = {{i}} >{{ areas[i] }}</option>
+                {% endfor %}
+            </select>
+            <label for="premis">Premise </label>
+            <select name="premis" id="premis">
+                {% for i in  premis%}
+                    <option value={{i}}>{{premis[i]}}</option>
+                {% endfor %}
+            </select>
+            <label for="sev">Severity</label>
+            <select name="sev" id="sev">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <label for="">Sex</label>
+            <select name="sex" id="sex">
+                <option value="2">Unknown</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+            <button type = 'submit' value="Predict Crime Type">Predict Severity</button>
+        </form>
+    </div>
+    <div class="container1" id="div2">
+        <form action="/severity" method = 'post'>
+            <h2>Severity</h2>
+            <label for="">Weapon Used</label>
+            <select name="weapon" id="weapon">
+                {% for i in  weapon%}
+                    <option value={{i}}>{{weapon[i]}}</option>
+                {% endfor %}
+            </select>
+            <label for="area">Area</label>
+            <select name="area" id="area">
+                {% for i in areas %}
+                    <option value = {{i}} >{{ areas[i] }}</option>
+                {% endfor %}
+            </select>
+            <label for="crime">Crime Type</label>
+            <select name="crime" id="crime">
+                {% for i in crime %}
+                    <option value = {{i}} >{{ crime[i] }}</option>
+                {% endfor %}
+            </select>
+            <label for="age">Age</label>
+                <input type="number" name = 'age' id = 'age'>
+            <label for="sex">Sex</label>
+            <select name="sex" id="sex">
+                <option value="2">Unknown</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+            <label for="desc">Victim Descent</label>
+            <select name="desc" id="desc">
+                {% for i in desc1 %}
+                    <option value = {{i}} >{{ desc2[desc1[i]] }}</option>
+                {% endfor %}
+            </select>
+            <button type = 'submit'>Predict Severity</button>
+        </form>
+    </div>
+    <div class="container2" id="div3">
+        <form action="/areaPredict" method = 'post'>
+            <h2>Area from Latitude and Longitude</h2>
+            <label for="lat">Latitude : </label>
+            <input type="text" name = 'lat', id = 'lat'>
+            <label for="lon">Longitude : </label>
+            <input type="text" name = 'lon', id = 'lon'>
+            <button type = 'submit'>Get Area</button>
+        </form>
+    </div>
+    <div class="container3" id="div4">
+        <form action="/genderPredict" method = 'post'>
+            <h2>Victim Gender Prediction</h2>
+            <label for="crime">Crime Type</label>
+            <select name="crime" id="crime">
+                {% for i in crime %}
+                    <option value = {{i}} >{{ crime[i] }}</option>
+                {% endfor %}
+            </select>
+            <label for="area">Area</label>
+            <select name="area" id="area">
+                {% for i in areas %}
+                    <option value = {{i}} >{{ areas[i] }}</option>
+                {% endfor %}
+            </select>
+            <label for="time">Time Period : </label>
+            <select name="time" id="time">
+                <option value="1">Day</option>
+                <option value="2">Night</option>
+                <option value="3">Evening</option>
+            </select>
+            <label for="desc">Victim Descent</label>
+            <select name="desc" id="desc">
+                {% for i in desc1 %}
+                    <option value = {{i}} >{{ desc2[desc1[i]] }}</option>
+                {% endfor %}
+            </select>
+            <label for="age">Age</label>
+                <input type="number" name = 'age' id = 'age' style = "color: white;background-color: black;width: 19em;height: 1.6em;">
+            <button type = 'submit'>Predict Gender</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        var ele = document.getElementById('hours');
+        for(let i = 0;i<24;i++){
+            var li = document.createElement('option');
+            li.value = i;
+            li.textContent = i;
+            ele.appendChild(li);
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,297 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size:larger;
+}
+.anchor-links1{
+    position:relative;
+    top:-150px;
+    left:150px;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    padding:15px;
+    text-align: center;
+    font-size: medium;
+    border: 1px solid deepskyblue;
+    border-radius: 35px;
+    /* border-color: deepskyblue;
+    border-width: 10px; */
+}
+.anchor-links2{
+    position:relative;
+    top:-200px;
+    left:450px;
+    width:200px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    padding:15px;
+    border: 1px solid tomato;
+    border-radius: 35px;
+    /* border-color: deepskyblue;
+    border-width: 10px; */
+}
+.anchor-links3{
+    display: inline-block;
+    position:relative;
+    top:-254px;
+    left:750px;
+    width:200px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    padding:15px;
+    border: 1px solid yellowgreen;
+    border-radius: 35px;
+    /* border-color: deepskyblue;
+    border-width: 10px; */
+} 
+.anchor-links4{
+    margin-left: 83px;
+    display: inline-block;
+    position:relative;
+    top:-254px;
+    left:750px;
+    width:200px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    padding:15px;
+    border: 1px solid #dee9c6;
+    border-radius: 35px;
+    /* border-color: deepskyblue;
+    border-width: 10px; */
+} 
+
+.image-container {
+    position: relative;
+    margin-left: 5%; 
+} 
+.header-image{
+    background-size: cover;
+    width: 95%;
+}
+header{
+    text-align: center;
+}
+.container,.container1,.container2,.container3{
+    border: 2px solid black;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 10px;
+}
+.container{
+    border-color:deepskyblue;
+    border-width: 5px;
+    border-radius: 10px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(0, 191, 255, 0.669);
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container form label {
+    display: flex;
+    align-items: left;/* Align label and input vertically */
+    /* Add some margin between label-input pairs */
+}
+
+.container form select {
+    margin-bottom: 20px; 
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    width:20px;
+    padding:10px 5px
+}
+  /* Custom Select wrapper */
+.container form select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+.container1{
+    border-color:tomato;
+    border-width: 5px;
+    border-radius: 10px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255, 99, 71, 0.587);
+}
+.container1 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container1 form label {
+    display: flex;
+    align-items: left;/* Align label and input vertically */
+    /* Add some margin between label-input pairs */
+}
+
+.container1 form select {
+    margin-bottom: 20px; 
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    width:20px;
+    padding:10px 5px
+}
+  /* Custom Select wrapper */
+.container1 form select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}  
+.container2{
+    border-color:yellowgreen;
+    border-width: 5px;
+    border-radius: 10px;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(153, 205, 50, 0.635);
+}
+.container3{
+    border-color: #a1a95c;
+    border-width: 5px;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #dce2aa;
+}
+.container2 form,.container3 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container2 form label,.container3 form label {
+    display: flex;
+    align-items: left;/* Align label and input vertically */
+    /* Add some margin between label-input pairs */
+}
+.container3 form select{
+    margin-bottom: 20px; 
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    width:20px;
+    padding:10px 5px
+}
+.container2 form select {
+    margin-bottom: 20px; 
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    width:20px;
+    padding:10px 5px
+}
+  /* Custom Select wrapper */
+.container2 form select,.container3 form select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.container1 #age{
+    width: 28%;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
+.container2 #lat{
+    width: 33%;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    margin-bottom: 15px;
+}
+.container2 #lon{
+    width: 33%;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    margin-bottom: 15px;
+}
+button{
+    width: 200px;
+    height: 33px;
+    border: 5px;
+    border-color: black;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0.5,0.7);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top:20px;
+}
+.banner{
+    margin-left: 3em;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.32);
+    width:400px;
+    position: relative;
+    top:250px;
+    left:400px;
+    text-align: center;
+    font-size: 1.8em;
+}
